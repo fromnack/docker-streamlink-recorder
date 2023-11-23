@@ -11,6 +11,8 @@ ENV streamlinkCommit=29741769a88aa71e7eb55f5e3eafa37271ef9d73
 
 #RUN pip3 install versioningit
 
+#RUN pip3 install cloudscraper
+
 #RUN tar -xzf /opt/streamlink-${streamlinkVersion}.tar.gz -C /opt/ && \
 #	rm /opt/streamlink-${streamlinkVersion}.tar.gz && \
 #	cd /opt/streamlink-${streamlinkVersion}/ && \
