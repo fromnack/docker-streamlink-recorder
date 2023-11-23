@@ -11,8 +11,6 @@ ENV streamlinkCommit=29741769a88aa71e7eb55f5e3eafa37271ef9d73
 
 #RUN pip3 install versioningit
 
-#RUN pip3 install cloudscraper
-
 #RUN tar -xzf /opt/streamlink-${streamlinkVersion}.tar.gz -C /opt/ && \
 #	rm /opt/streamlink-${streamlinkVersion}.tar.gz && \
 #	cd /opt/streamlink-${streamlinkVersion}/ && \
@@ -21,6 +19,8 @@ ENV streamlinkCommit=29741769a88aa71e7eb55f5e3eafa37271ef9d73
 RUN apt-get update && apt-get install gosu && apt-get install python3-pip -y
 
 RUN pip3 install --upgrade git+https://github.com/streamlink/streamlink.git@${streamlinkCommit}
+
+RUN pip3 install cloudscraper
 
 RUN  echo 'export PATH="${HOME}/.local/bin:${PATH}"'
 
